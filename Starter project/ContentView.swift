@@ -8,15 +8,52 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var income : Int = 0
+    @State private var additional : Int = 0
+    @State var totalIncome : Int = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        ZStack(alignment: .top){
+            Color.white
+                .ignoresSafeArea()
+            ScrollView{
+                Spacer()
+                Text("Simple Mortgage Affordability Calculator")
+                    .foregroundColor(.white)
+                    .background(.black)
+                    .font(.system(size: 33))
+                
+                HStack() {
+                    Text("Enter your income (before tax):")
+                    Text("$")
+                    TextField("Enter here", value: $income, format: .number)
+                }
+                .font(.system(size:33))
+                .padding(30)
+                
+                HStack() {
+                    Text("Additional income? (ex. spouse)")
+                    Text("$")
+                    TextField("Enter here", value: $additional, format: .number)
+                }
+                .font(.system(size:33))
+                .padding(30)
+                
+                Button("Next!"){
+                    totalIncome = income+additional
+                    print(totalIncome)
+                    
+                }
+                .font(.system(size: 33))
+                .foregroundColor(.white)
+                .background(.black)
+                
+                
+            }
         }
-        .padding()
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
