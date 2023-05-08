@@ -15,6 +15,7 @@
 		E0B8A5C12A0615C2001B9D01 /* Starter_projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8A5C02A0615C2001B9D01 /* Starter_projectUITests.swift */; };
 		E0B8A5C32A0615C2001B9D01 /* Starter_projectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8A5C22A0615C2001B9D01 /* Starter_projectUITestsLaunchTests.swift */; };
 		E0B8A5D02A08A8C5001B9D01 /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8A5CF2A08A8C4001B9D01 /* ExpenseView.swift */; };
+		E0B8A5D22A08D751001B9D01 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8A5D12A08D751001B9D01 /* SummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		E0B8A5C02A0615C2001B9D01 /* Starter_projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starter_projectUITests.swift; sourceTree = "<group>"; };
 		E0B8A5C22A0615C2001B9D01 /* Starter_projectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starter_projectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E0B8A5CF2A08A8C4001B9D01 /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
+		E0B8A5D12A08D751001B9D01 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				E0B8A5A52A0615C1001B9D01 /* Starter_projectApp.swift */,
 				E0B8A5A72A0615C1001B9D01 /* ContentView.swift */,
 				E0B8A5CF2A08A8C4001B9D01 /* ExpenseView.swift */,
+				E0B8A5D12A08D751001B9D01 /* SummaryView.swift */,
 				E0B8A5A92A0615C2001B9D01 /* Assets.xcassets */,
 				E0B8A5AB2A0615C2001B9D01 /* Preview Content */,
 			);
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B8A5A82A0615C1001B9D01 /* ContentView.swift in Sources */,
+				E0B8A5D22A08D751001B9D01 /* SummaryView.swift in Sources */,
 				E0B8A5A62A0615C1001B9D01 /* Starter_projectApp.swift in Sources */,
 				E0B8A5D02A08A8C5001B9D01 /* ExpenseView.swift in Sources */,
 			);

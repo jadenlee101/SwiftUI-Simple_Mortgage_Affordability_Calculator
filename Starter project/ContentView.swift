@@ -54,14 +54,12 @@ struct ContentView: View {
                         .background(.black)
                         .font(.system(size: 33))
                         .navigationDestination(isPresented: $next) {
-                            ExpenseView()
+                            ExpenseView(totalIncome: totalIncome)
                         }
                         .navigationBarTitle("")
                         .navigationBarHidden(true)
                     
                     
-                    
-    
                 }
             }
         }
