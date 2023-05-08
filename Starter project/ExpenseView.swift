@@ -31,6 +31,7 @@ struct ExpenseView: View {
                         Text("Car loans, insurance ")
                         Text("$")
                         TextField("Enter here", value: $carpayments, format: .number)
+                            .keyboardType(.numberPad)
                     }
                     .font(.system(size:33))
                     .padding(10)
@@ -40,6 +41,7 @@ struct ExpenseView: View {
                         
                         Text("$")
                         TextField("Enter here", value: $entertainment, format: .number)
+                            .keyboardType(.numberPad)
                     }
                     .font(.system(size:33))
                     .padding(10)
@@ -49,6 +51,7 @@ struct ExpenseView: View {
                         
                         Text("$")
                         TextField("Enter here", value: $groceries, format: .number)
+                            .keyboardType(.numberPad)
                     }
                     .font(.system(size:33))
                     .padding(10)
@@ -58,6 +61,7 @@ struct ExpenseView: View {
                         
                         Text("$")
                         TextField("Enter here", value: $others, format: .number)
+                            .keyboardType(.numberPad)
                     }
                     .font(.system(size:33))
                     .padding(10)

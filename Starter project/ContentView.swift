@@ -29,6 +29,7 @@ struct ContentView: View {
                         Text("Enter your income (before tax):")
                         Text("$")
                         TextField("Enter here", value: $income, format: .number)
+                            .keyboardType(.numberPad)
                     }
                     .font(.system(size:33))
                     .padding(30)
@@ -37,12 +38,13 @@ struct ContentView: View {
                         Text("Additional income? (ex. spouse)")
                         Text("$")
                         TextField("Enter here", value: $additional, format: .number)
+                            .keyboardType(.numberPad)
                         
                     }
                     .font(.system(size:33))
                     .padding(30)
                     
-                    
+                    Spacer()
                         Button {
                             next.toggle()
                             totalIncome = income + additional
