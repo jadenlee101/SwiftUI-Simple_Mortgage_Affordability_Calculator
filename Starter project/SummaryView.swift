@@ -9,14 +9,35 @@ import SwiftUI
 
 struct SummaryView: View {
     var netIncome : Int
+    @State private var reset = false
     
     var body: some View {
-        Text("net income \(netIncome)")
+        NavigationStack{
+            VStack{
+                Text("net income \(netIncome)")
+                
+                Spacer()
+                Button {
+                    reset.toggle()
+                } label: {
+                    Text("Reset")
+                        .foregroundColor(.white)
+                        .background(.black)
+                        .font(.system(size: 33))
+                        .padding(.all)
+                }
+                .navigationDestination(isPresented: $reset) {ContentView()}
+                
+                
+            }
+        }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 
 struct SummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        SummaryView(netIncome: 0)
+        ContentView()
     }
 }
