@@ -9,12 +9,22 @@ import SwiftUI
 
 struct SummaryView: View {
     var netIncome : Int
+    var mortgageAmount : Int
     @State private var reset = false
     
     var body: some View {
         NavigationStack{
             VStack{
-                Text("net income \(netIncome)")
+                Text("Your net income $\(netIncome)")
+//                    .foregroundColor(.white)
+//                    .background(.black)
+                    .font(.system(size: 33))
+                    .padding(.all)
+                Text("You can afford $\(mortgageAmount)")
+                    .foregroundColor(.white)
+                    .background(.black)
+                    .font(.system(size: 33))
+                    .padding(.all)
                 
                 Spacer()
                 Button {

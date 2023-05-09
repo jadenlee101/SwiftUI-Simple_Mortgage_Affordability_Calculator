@@ -17,6 +17,7 @@ struct ExpenseView: View {
     @State var totalExpense = 0
     @State var submit = false
     @State var sum = 0
+    @State var mortgage = 0
     
     var body: some View {
         NavigationStack {
@@ -69,7 +70,8 @@ struct ExpenseView: View {
                     Button {
                         submit.toggle()
                         totalExpense = entertainment + groceries + carpayments + others
-                        sum = totalIncome - totalExpense
+                        sum = totalIncome - totalExpense * 12
+                        mortgage = sum * 4
                         print("totoal income : \(totalIncome)")
                         print("total expense: \(totalExpense)")
                         print(sum)
@@ -80,7 +82,7 @@ struct ExpenseView: View {
                     .background(.black)
                     .font(.system(size: 33))
                     .navigationDestination(isPresented: $submit) {
-                        SummaryView(netIncome: sum)
+                        SummaryView(netIncome: sum, mortgageAmount: mortgage)
                     }
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
